@@ -1,0 +1,54 @@
+---- DEPLOY NA DIGITAL OCEAN - VPS --------
+
+1º criar conta
+2º download putty para geração de chave 
+3º gerar chave publica e chave privada
+4º acessando a vps, putty > configuração > connection > SSH > auth > adicionar caminho da chave privada
+5º acesssando a vps, putty > session > add ip do servidor > save > open
+6º usuario > root 
+--- acessou o servidor LINUX --
+
+1º instalar node.js 
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+-sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+2º instalar mysql
+sudo apt update
+sudo apt install mysql-server
+mysql_secure_installation
+
+3º download FileZilla, instalar
+conectar ao servidor > Arquivo > Gerenciador de Sites > New site > Protocolo SFTP > Ip do servidor
+tipo de logon(Arquivo chave) > root > chave privada > conectar
+criar pasta(guia perguntas) > subir pastas (menos node_modules) > pelo package.json sabera as dependencias(bibliotecas > npm install
+
+4º Criar database
+mysql
+CREATE DATABASE guiaperguntas;
+exit;
+
+5º verificar se as informações estão certas com o localhost
+entrar nas pastas guiaperguntas/database
+nano database.js
+verificar se as informações estão certas com o localhost
+crtl + x + y + enter
+
+6º BUG na execução do index.js
+mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234567890'
+
+7º executar index.js
+node index.js
+
+8º acessar aplicação 
+verificar porta 8080, trocar para 80 porta padrão da web do servidor
+
+9º colocar aplicação rodando em background (rodando em segundo plano podendo fechar terminal do putty)
+acessar putty > load guiaperguntas > login root > sudo npm install -g pm2
+rodar aplicação dessa forma
+pm2 start index.js 
+
+
+
+
