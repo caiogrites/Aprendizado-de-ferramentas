@@ -1,0 +1,10 @@
+------ DOCKER --------
+
+FROM imagem
+RUN comando
+COPY copia arquivos do host para a imagem
+CMD comando de saida
+
+** Ter estratégia arquivos pesados primeiro
+
+CAMADAS/LAYERS
