@@ -1,0 +1,8 @@
+VERIFICANDO SE SSH ESTÁ FUNCIONANDO NO SERVIDOR LINUX
+
+sudo lsof -i -n -P | grep LISTEN  // verificar se a porta está aberta padrão 22
+
+se não executar comando para dar o start no SSH
+
+$ sudo systemctl enable sshd.service
+$ sudo systemctl start sshd.service
