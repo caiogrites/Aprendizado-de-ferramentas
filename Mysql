@@ -1,1 +1,5 @@
+Permitir acesso remoto ao mysql 
 https://oxidigital.com.br/permitir-acesso-remoto-ao-mysql-no-ubuntu/
+
+importar e exportar banco de dados via SSH
+https://king.host/wiki/artigo/mysql-via-ssh/#:~:text=Importando%20uma%20base%20MySQL%20via%20SSH&text=(Voc%C3%AA%20precisa%20estar%20no%20diret%C3%B3rio,de%20conex%C3%A3o%20do%20seu%20banco).&text=Assim%20que%20executar%20o%20comando,o%20processo%20de%20importa%C3%A7%C3%A3o%20inicie.
